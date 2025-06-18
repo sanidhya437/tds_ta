@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
    # Load the discourse posts from the JSON file
-with open('discourse_posts.json', 'r') as f:
+with open('discourse_posts.json', 'r',encoding='utf-8') as f:
        discourse_posts = json.load(f)
 
 @app.route('/api/', methods=['POST'])
