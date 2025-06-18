@@ -29,6 +29,7 @@ def answer_question():
 
            if any(keyword in title or keyword in content for keyword in keywords):
                relevant_posts.append(post)
+                 break
 
        if relevant_posts:
            answer = "Here are some relevant posts that might help you:"
