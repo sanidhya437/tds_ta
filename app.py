@@ -28,7 +28,7 @@ def answer_question():
            content = post.get('content', '').lower()
 
            if any(keyword in title or keyword in content for keyword in keywords):
-               answer = content.strip() if content else "No content available for this post."
+               relevant_posts.append(post)
                break 
 
        if relevant_posts:
