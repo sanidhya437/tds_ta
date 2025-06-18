@@ -14,8 +14,7 @@ with open('discourse_posts.json') as f:
 def answer_question():
        data = request.json
        question = data.get('question')
-       
-          relevant_posts = []
+       relevant_posts = []
        # Define keywords based on the question
        keywords = question.split()  # Split the question into words
        # Search for relevant posts based on keywords
